@@ -1,30 +1,23 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const lightboxCaption = document.getElementById('lightbox-caption');
-    const fotos = document.querySelectorAll('.galeria-item img');
-    const closeBtn = document.querySelector('.close-btn');
+// Prueba de conexión rápida
+console.log("El archivo funciones.js está cargado correctamente");
 
-    // Cuando haces clic en cualquier foto de la galería
-    fotos.forEach(foto => {
-        foto.addEventListener('click', () => {
-            lightbox.style.display = 'block'; // Mostramos la caja
-            lightboxImg.src = foto.src; // Ponemos la misma foto
-            // Buscamos el nombre que está arriba de la foto
-            const nombre = foto.parentElement.querySelector('.nombre-foto').innerText;
-            lightboxCaption.innerText = nombre;
-        });
-    });
+document.addEventListener('click', function (event) {
+    // 1. Detectamos si hacemos clic en una imagen
+    if (event.target.tagName === 'IMG') {
+        const imagenPulsada = event.target;
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
 
-    // Cuando haces clic en la (X) para cerrar
-    closeBtn.addEventListener('click', () => {
-        lightbox.style.display = 'none';
-    });
-
-    // También se cierra si haces clic fuera de la foto
-    lightbox.addEventListener('click', (e) => {
-        if (e.target !== lightboxImg) {
-            lightbox.style.display = 'none';
+        // 2. Si existe el lightbox, le pasamos la foto
+        if (lightbox && lightboxImg) {
+            lightbox.style.display = 'flex'; // Usamos flex para centrar
+            lightboxImg.src = imagenPulsada.src;
+            console.log("Abriendo imagen: " + imagenPulsada.src);
         }
-    });
+    }
+
+    // 3. Cerrar si pulsamos la X o fuera de la foto
+    if (event.target.classList.contains('close-btn') || event.target.id === 'lightbox') {
+        document.getElementById('lightbox').style.display = 'none';
+    }
 });

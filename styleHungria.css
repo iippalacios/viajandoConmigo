@@ -3,11 +3,14 @@ body{
     padding: 40px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
-    background-image: linear-gradient(rgb(255, 255, 255), rgb(182, 182, 182));
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(210, 209, 209));
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
     min-height: 100vh;
+    
 }
 
 .titulo{
@@ -30,6 +33,7 @@ body{
 
     border-top-color: #ff001e;
     border-bottom-color: #007E3A;
+
 }
 
 .titulo h1{
@@ -65,10 +69,14 @@ body{
 }
 
 .zona{
-    display: inline-block;
     text-align: center;
-    background-color: #ffffff;
+    background-color: #ffffff49;
     color: rgb(0, 0, 0);
+
+    border-color:rgb(255, 255, 255);
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 25px;
 
     border-radius: 25px;
     padding: 0 20px 0 20px;
@@ -138,21 +146,28 @@ body{
 }
 
 .galeria-item {
-    flex: 0 1 auto;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column; /* Pone el texto arriba y la foto abajo */
+    align-items: center;    /* Centra horizontalmente todo lo que hay dentro */
+    width: 380px;           /* IMPORTANTE: Debe ser el mismo ancho que definiste para la foto */
     text-align: center;
 }
 
 .nombre-foto {
-    font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     color: #333;
     margin-bottom: 8px;
     font-size: 18px;
     text-transform: uppercase;
+
+    min-height: 1.2em; /* Reserva el espacio de una línea de texto */
+    margin-bottom: 8px; /* El espacio que separa el texto de la foto */
+    display: block;
 }
 
 .galeria-item img {
-    width: 300px;         /* Ancho de las fotos */
+    width: 380px;         /* Ancho de las fotos */
     height: 200px;        /* Alto de las fotos */
     object-fit: cover;    /* Para que no se deformen */
     border-radius: 25px;  /* Bordes bien redondos como pediste */
@@ -163,11 +178,18 @@ body{
 
 /* EFECTO REALCE: Al pasar el cursor, la foto sube y brilla */
 .galeria-item:hover img {
-    transform: translateY(-10px); /* La foto sube un poquito */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* Sombra para que parezca que flota */
-    filter: brightness(1.1); /* Se ilumina un poco */
+    /* Scale(1.1) hace que la imagen crezca un 10%, dando el efecto de que sale hacia afuera */
+    transform: scale(1.1); 
+    
+    /* Aumentamos la sombra para reforzar el efecto de profundidad */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5); 
+    
+    /* Mantenemos el brillo */
+    filter: brightness(1.1); 
+    
+    /* IMPORTANTE: para que el movimiento sea suave y no un salto brusco */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
 }
-
 .lightbox {
     display: none; /* Escondido por defecto */
     position: fixed;
