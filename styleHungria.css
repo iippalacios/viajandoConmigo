@@ -3,7 +3,7 @@ body{
     padding: 40px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
-    background-image: linear-gradient(rgba(255, 255, 255, 0.278), rgba(255, 255, 255, 0)), url('wow.jpg');
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(182, 182, 182));
     background-size: cover;
     background-position: center;
 
