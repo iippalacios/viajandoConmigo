@@ -1,0 +1,171 @@
+body{
+    margin: 0;
+    padding: 40px;
+    font-family: 'Times New Roman', Times, serif;
+
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('avion-despegue.jpg');
+    background-size: cover;
+    background-position: center;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+}
+
+.titulo{
+    width: 100%;
+    padding: 40px 0;
+
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+
+    color: rgb(2, 11, 141);
+    
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('cielo.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.contenedor-secciones{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+
+    font-size: 13px;
+}
+
+.caja-seccion{
+    flex: 1;
+    display: flex;
+
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    color: aliceblue;
+    text-decoration: none;
+    box-sizing: border-box;
+
+    position: relative;
+    cursor: pointer;
+}
+
+.caja-seccion:hover{
+    filter: brightness(1.1);
+}
+
+.caja-seccion:first-child {
+    border-bottom-left-radius: 15px;
+}
+
+.caja-seccion:last-child {
+    border-bottom-right-radius: 15px;
+}
+
+.color1{
+    background-color: rgb(40, 58, 255);
+}
+
+.color2 {
+    background-color: rgb(75, 191, 212);
+}
+
+.desplegable{
+    display: none;
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+    z-index: 10;
+}
+
+.desplegable li a{
+    display: block;
+    padding: 10px;
+
+    color: rgb(0, 42, 255);
+    background-color: rgb(255, 255, 255);
+
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+
+    border-radius: 25px;
+
+}
+
+.desplegable li a:hover{
+    background-color: rgb(189, 226, 253);
+    
+    color: rgb(0, 30, 255);
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.caja-seccion:hover .desplegable{
+    display: block;
+}
+
+.contenedor-texto{
+    display: flex;
+    align-items: flex-start;
+
+    justify-content: center;
+    margin: 50px auto;
+    margin-top: 160px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    gap: 90px;
+}
+
+.texto{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+
+    text-align: justify;
+    background-color: #ffffff3a;
+    background-size: cover;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
+.texto h2{
+    text-align: center;
+    background-color: #dad346e5;
+    color: aliceblue;
+
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.texto p{
+    background-color: #ffffffda;
+
+    border-radius: 20px;
+    padding: 30px;
+}
