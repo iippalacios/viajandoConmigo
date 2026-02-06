@@ -112,8 +112,6 @@ body{
 
 .desplegable li a:hover{
     background-color: rgb(189, 226, 253);
-    
-    color: rgb(0, 30, 255);
 
     font-size: 12px;
     font-weight: bold;
@@ -170,6 +168,21 @@ body{
 
     border-radius: 20px;
     padding: 30px;
+}
+
+.espana:hover{
+    background: linear-gradient(to right, #ff0000, #fff700, #ff0000);
+    color: black;
+}
+
+.alemania:hover{
+    background: linear-gradient(#000000, #ff0000, #fff700);
+    color: white;
+}
+
+.hungria:hover{
+    background: linear-gradient(#ff0000, #ffffff, #36cb00);
+    color: black;
 }
 
 /*
