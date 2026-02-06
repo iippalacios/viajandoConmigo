@@ -1,0 +1,200 @@
+body{
+    margin: 0;
+    padding: 40px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    background-image: linear-gradient(rgba(255, 255, 255, 0.278), rgba(255, 255, 255, 0)), url('wow.jpg');
+    background-size: cover;
+    background-position: center;
+
+    min-height: 100vh;
+}
+
+.titulo{
+    width: 100%;
+
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+
+    color: #ff001e;
+    
+    border-radius: 25px;
+    
+    background-color: rgb(255, 255, 255);
+    
+    border-style: solid;
+    border-width: 8px;
+    border-radius: 25px;
+
+    border-top-color: #ff001e;
+    border-bottom-color: #007E3A;
+}
+
+.titulo h1{
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+}
+
+.titulo p {
+    margin-top: 5px;    /* Un margen muy pequeño arriba para que no se toquen */
+    color: #007E3A;
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.introduccion{
+    display: flex;
+    text-align: center;
+
+    justify-content: center;
+    margin: 30px auto;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.introduccion h1{
+    color: red;
+}
+
+.introduccion h2{
+    color: green;
+}
+
+.zona{
+    display: inline-block;
+    text-align: center;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+
+    border-radius: 25px;
+    padding: 0 20px 0 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.contenedor-texto{
+    display: flex;
+    align-items: flex-start;
+
+    justify-content: center;
+    margin: 50px auto;
+    margin-top: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    gap: 90px;
+}
+
+.texto{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+
+    text-align: justify;
+    background-color: #ffffff3a;
+    background-size: cover;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
+.texto h2{
+    text-align: center;
+    background-color: #dad346e5;
+    color: aliceblue;
+
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.texto p{
+    background-color: #ffffffda;
+
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.contenedor-fotos{
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: left;
+
+    gap: 30px;
+    padding: 20PX;
+
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+.galeria-item {
+    flex: 0 1 auto;
+    text-align: center;
+}
+
+.nombre-foto {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.galeria-item img {
+    width: 300px;         /* Ancho de las fotos */
+    height: 200px;        /* Alto de las fotos */
+    object-fit: cover;    /* Para que no se deformen */
+    border-radius: 25px;  /* Bordes bien redondos como pediste */
+    transition: all 0.3s ease; /* Suavidad para el realce */
+    cursor: pointer;
+    display: block;
+}
+
+/* EFECTO REALCE: Al pasar el cursor, la foto sube y brilla */
+.galeria-item:hover img {
+    transform: translateY(-10px); /* La foto sube un poquito */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* Sombra para que parezca que flota */
+    filter: brightness(1.1); /* Se ilumina un poco */
+}
+
+.lightbox {
+    display: none; /* Escondido por defecto */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo negro transparente */
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    margin-top: 5%;
+    border: 3px solid white;
+    border-radius: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+    cursor: pointer;
+}

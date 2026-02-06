@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 40px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
     background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('avion-despegue.jpg');
     background-size: cover;
@@ -17,7 +17,7 @@ body{
     padding: 40px 0;
 
     text-align: center;
-    font-family: 'Times New Roman', Times, serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bold;
 
     color: rgb(2, 11, 141);
@@ -129,7 +129,7 @@ body{
 
     justify-content: center;
     margin: 50px auto;
-    margin-top: 160px;
+    margin-top: 100px;
     margin-left: 20px;
     margin-right: 20px;
 
@@ -156,6 +156,8 @@ body{
 
 .texto h2{
     text-align: center;
+    font-size: 16px;
+
     background-color: #dad346e5;
     color: aliceblue;
 
@@ -169,3 +171,33 @@ body{
     border-radius: 20px;
     padding: 30px;
 }
+
+/*
+<div class = "contenedor-texto">
+            <div class = "texto">
+                <h2>PAISES SCHENGEN</h2>
+                <p>
+                    El espacio Schengen es esencialmente una zona de libre circulación que engloba a 29 naciones europeas.
+                    Su principal característica es que ha suprimido los controles fronterizos en sus límites comunes, permitiendo que personas, bienes y servicios se desplacen con total libertad,
+                    de forma muy similar a como te moverías entre provincias de un mismo país.<br><br>
+
+                    Se trata de un acuerdo de cooperación internacional que establece un territorio sin fronteras internas. En este espacio, los estados miembros han unificado sus normativas
+                    sobre visados y seguridad, permitiendo que cualquier individuo que haya cruzado legalmente una
+                    frontera exterior pueda transitar por el resto del área sin someterse a nuevos controles de identidad.
+                </p>
+            </div>
+
+            <div class = "texto">
+                <h2>PAISES NO SCHENGEN</h2>
+                <p>
+                    Los territorios No Schengen son aquellas naciones europeas que mantienen sus propias fronteras y controles de seguridad independientes. Su principal característica
+                    es que conservan la soberanía sobre sus límites territoriales, lo que obliga a cualquier viajero a someterse a inspecciones de identidad y
+                    pasaporte al cruzar sus fronteras, incluso si provienen de un país vecino dentro del continente.<br><br>
+
+                    Se trata de estados que, por razones políticas, geográficas o de soberanía, no forman parte del acuerdo de libre circulación. En este espacio, cada país
+                    aplica sus propias normativas de extranjería y seguridad, lo que implica que el cruce de sus fronteras no es automático: todo individuo debe validar su documentación legal (pasaporte)
+                    ante las autoridades migratorias correspondientes para poder ingresar o transitar por su territorio.
+                </p>
+            </div>
+</div>
+*/
