@@ -74,7 +74,7 @@ body{
 }
 
 .color1{
-    background-color: rgb(40, 58, 255);
+    background-color: rgb(0, 0, 0);
 }
 
 .color2 {
@@ -99,7 +99,7 @@ body{
     display: block;
     padding: 10px;
 
-    color: rgb(0, 42, 255);
+    color: rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
 
     text-decoration: none;
@@ -112,7 +112,6 @@ body{
 
 .desplegable li a:hover{
     background-color: rgb(189, 226, 253);
-
     font-size: 12px;
     font-weight: bold;
 }
@@ -171,18 +170,27 @@ body{
 }
 
 .espana:hover{
-    background: linear-gradient(to right, #ff0000, #fff700, #ff0000);
+    background: linear-gradient(#ff0000, #fff700, #ff0000);
     color: black;
+    border-color: #ff0000;
+    border-style: solid;
+    border-width: 1px;
 }
 
 .alemania:hover{
     background: linear-gradient(#000000, #ff0000, #fff700);
     color: white;
+    border-color: rgb(12, 0, 0);
+    border-width: 1px;
+    border-style: solid;
 }
 
 .hungria:hover{
     background: linear-gradient(#ff0000, #ffffff, #36cb00);
     color: black;
+    border-color: #ff0000;
+    border-style: solid;
+    border-width: 1px;
 }
 
 /*

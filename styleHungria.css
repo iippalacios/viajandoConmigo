@@ -3,14 +3,32 @@ body{
     padding: 40px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
-    background-image: linear-gradient(rgb(255, 255, 255), rgb(210, 209, 209));
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(225, 225, 225), rgb(255, 255, 255));
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 
     min-height: 100vh;
-    
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    right: 50px;
+    top: 0;
+    width: 9px; /* Aumentamos el ancho para que quepan las 3 */
+    height: 100%;
+    /* Creamos las 3 franjas sin degradado suave (colores puros) */
+    background: linear-gradient(to right, 
+        red 33.3%, 
+        white 33.3%, 
+        white 66.6%, 
+        green 66.6%
+    );
+    z-index: -1;
+    /* Opcional: una pequeña sombra para que parezca que flota */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 }
 
 .titulo{
@@ -56,8 +74,8 @@ body{
 
     justify-content: center;
     margin: 30px auto;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .introduccion h1{
@@ -66,6 +84,36 @@ body{
 
 .introduccion h2{
     color: green;
+}
+
+.contenedor-texto{
+    display: flex;
+    align-items: flex-start;
+
+    justify-content: center;
+    margin: 50px auto;
+    margin-top: 60px;
+    margin-left: 50px;
+    margin-right: 20px;
+
+    gap: 90px;
+}
+
+.texto{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+
+    text-align: justify;
+    background-color: #0000003a;
+    background-size: cover;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .zona{
@@ -80,69 +128,23 @@ body{
 
     border-radius: 25px;
     padding: 0 20px 0 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.contenedor-texto{
-    display: flex;
-    align-items: flex-start;
-
-    justify-content: center;
-    margin: 50px auto;
-    margin-top: 60px;
-    margin-left: 20px;
-    margin-right: 20px;
-
-    gap: 90px;
-}
-
-.texto{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-
-    justify-content: flex-start;
-
-    text-align: justify;
-    background-color: #ffffff3a;
-    background-size: cover;
-    border-radius: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-
-}
-
-.texto h2{
-    text-align: center;
-    background-color: #dad346e5;
-    color: aliceblue;
-
-    border-radius: 20px;
-    padding: 10px;
-}
-
-.texto p{
-    background-color: #ffffffda;
-
-    border-radius: 20px;
-    padding: 30px;
+    max-width: 800px;  /* La caja no crecerá más de esto en pantallas grandes */
+    width: 50%;       /* En pantallas pequeñas, ocupará el 90% del ancho */
+    margin: 10px auto;
 }
 
 .contenedor-fotos{
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-end;
 
     justify-content: left;
 
     gap: 30px;
     padding: 20PX;
 
-    margin-left: 20px;
+    margin-left: 35px;
     margin-right: 20px;
-
 }
 
 .galeria-item {

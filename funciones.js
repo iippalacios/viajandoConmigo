@@ -1,23 +1,48 @@
 // Prueba de conexión rápida
 console.log("El archivo funciones.js está cargado correctamente");
 
-document.addEventListener('click', function (event) {
-    // 1. Detectamos si hacemos clic en una imagen
-    if (event.target.tagName === 'IMG') {
-        const imagenPulsada = event.target;
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // --- 1. FUNCIÓN PARA ORDENAR PAÍSES ---
+    const ordenarListas = () => {
+        // Seleccionamos todas las listas desplegables
+        const listas = document.querySelectorAll('.desplegable');
+        
+        listas.forEach(lista => {
+            // Obtenemos los elementos <li>
+            const items = Array.from(lista.querySelectorAll('li'));
 
-        // 2. Si existe el lightbox, le pasamos la foto
-        if (lightbox && lightboxImg) {
-            lightbox.style.display = 'flex'; // Usamos flex para centrar
-            lightboxImg.src = imagenPulsada.src;
-            console.log("Abriendo imagen: " + imagenPulsada.src);
-        }
-    }
+            // Los ordenamos
+            items.sort((a, b) => {
+                // Buscamos el texto dentro del <a> y limpiamos espacios
+                const textoA = a.querySelector('a').innerText.trim().toUpperCase();
+                const textoB = b.querySelector('a').innerText.trim().toUpperCase();
+                
+                return textoA.localeCompare(textoB, 'es', { sensitivity: 'base' });
+            });
 
-    // 3. Cerrar si pulsamos la X o fuera de la foto
-    if (event.target.classList.contains('close-btn') || event.target.id === 'lightbox') {
-        document.getElementById('lightbox').style.display = 'none';
+            // Limpiamos la lista y volvemos a añadir los items ordenados
+            lista.innerHTML = "";
+            items.forEach(li => lista.appendChild(li));
+        });
+        
+        console.log("¡Listas ordenadas alfabéticamente!");
+    };
+
+    ordenarListas();
+
+    // --- 2. LOGICA DEL LIGHTBOX (Solo si existe en la página) ---
+    const lightbox = document.getElementById('lightbox');
+    if (lightbox) {
+        const imgFull = document.getElementById('lightbox-img');
+        document.addEventListener('click', (e) => {
+            if (e.target.tagName === 'IMG' && e.target.closest('.galeria-item')) {
+                imgFull.src = e.target.src;
+                lightbox.style.display = 'flex';
+            }
+            if (e.target.id === 'lightbox' || e.target.classList.contains('close-btn')) {
+                lightbox.style.display = 'none';
+            }
+        });
     }
 });
