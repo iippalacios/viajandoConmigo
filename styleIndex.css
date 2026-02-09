@@ -61,6 +61,25 @@ body{
     cursor: pointer;
 }
 
+.caja-seccion:hover::after {
+    content: "▼";
+    position: absolute;
+
+    top: 350px;
+    right: 5%;
+    transform: translateX(-50%);
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+
+    animation: rebote 1.5s infinite;
+    z-index: 100;
+}
+
+@keyframes rebote {
+    0%, 100% { transform: translate(-50%, 0); }
+    50% { transform: translate(-50%, 5px); }
+}
+
 .caja-seccion:hover{
     filter: brightness(1.1);
 }
@@ -93,6 +112,14 @@ body{
 
     list-style: none;
     z-index: 10;
+
+    max-height: 344.5px; /* Ajusta esta altura a tu gusto (ej. 200px, 40vh, etc.) */
+    overflow-y: auto;  /* Muestra el scroll solo si el contenido excede la altura */
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 .desplegable li a{
@@ -192,6 +219,143 @@ body{
     border-style: solid;
     border-width: 1px;
 }
+
+.austria:hover{
+    background: linear-gradient(#ff0000, #ffffff, #ff0000);
+    color: black;
+    border-color: #ff0000;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.grecia:hover{
+    background: linear-gradient(#0e88fb, #ffffff, #0e88fb);
+    color: black;
+    border-color: #0e49fb;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.belgica:hover{
+    background: linear-gradient(#000000, #fff700, #ff0000);
+    color: rgb(0, 0, 0);
+    border-color: rgb(12, 0, 0);
+    border-width: 1px;
+    border-style: solid;
+}
+
+.dinamarca:hover{
+    background: linear-gradient(#ff0000, #ffffff, #ff0000, #ffffff);
+    color: rgb(0, 0, 0);
+    border-color: rgb(255, 0, 0);
+    border-width: 1px;
+    border-style: solid;
+}
+
+.francia:hover{
+    background: linear-gradient(#0004ff, #ffffff, #ff0000);
+    color: rgb(0, 0, 0);
+    border-color: rgb(255, 0, 0);
+    border-width: 1px;
+    border-style: solid;
+}
+
+.holanda:hover{
+    background: linear-gradient(#af1111, #ffffff, #0f43ab);
+    color: rgb(0, 0, 0);
+    border-color: #af1111;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.islandia:hover{
+    background: linear-gradient(#0a50dd, #ffffff, #dd0a0a, #ffffff);
+    color: rgb(0, 0, 0);
+    border-color: #0a50dd;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.luxemburgo:hover{
+    background: linear-gradient(#ff0000, #ffffff, #00e5ff);
+    color: rgb(0, 0, 0);
+    border-color: #ff0000;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.italia:hover{
+    background: linear-gradient(#18c501, #ffffff, #ff0000);
+    color: rgb(0, 0, 0);
+    border-color: #18c501;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.polonia:hover{
+    background: linear-gradient(#ffffff, #ffffff, #ff0000);
+    color: rgb(0, 0, 0);
+    border-color: #ff0000;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.rumania:hover{
+    background: linear-gradient(#193b99, #f3da1b, #dc0000);
+    color: rgb(0, 0, 0);
+    border-color: #dc0000;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.bulgaria:hover{
+    background: linear-gradient(#ffffff, #028e00, #b90000);
+    color: rgb(255, 255, 255);
+    border-color: #dc0000;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.suiza:hover{
+    background: linear-gradient(#ff0000, #f8b5b5, #ff0000);
+    color: rgb(0, 0, 0);
+    border-color: #dc0000;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.rcheca:hover{
+    background: linear-gradient(#ffffff, #002fff, #ff0000);
+    color: rgb(255, 255, 255);
+    border-color: #dc0000;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.suecia:hover{
+    background: linear-gradient(#2742b8, #fffb00, #2742b8);
+    color: rgb(0, 0, 0);
+    border-color: #2742b8;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.escocia:hover{
+    background: linear-gradient(#002bec, #ffffff, #002bec);
+    color: rgb(0, 0, 0);
+    border-color: #2742b8;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.inglaterra:hover{
+    background: linear-gradient(#ffffff, #ffffff, #ff0000, #ffffff, #ffffff);
+    color: rgb(0, 0, 0);
+    border-color: #ffffff;
+    border-width: 1px;
+    border-style: solid;
+}
+
 
 /*
 <div class = "contenedor-texto">
