@@ -22,9 +22,9 @@ body::after {
 
     background: linear-gradient(to right,
         #ffffff 33.3%,
-        #028e00 33.3%,
-        #028e00 66.6%,
-        #b90000 33.3%
+        #0044ff 33.3%,
+        #0044ff 66.6%,
+        #ff0000.3%
     );
     z-index: -1;
 
@@ -39,7 +39,7 @@ body::after {
     font-weight: bold;
     font-size: 20px;
 
-    color: #dc0000;
+    color: #0004ff;
     
     border-radius: 25px;
     
@@ -50,9 +50,9 @@ body::after {
     border-radius: 25px;
 
     border-top-color: #ffffff;
-    border-bottom-color: #b90000;
-    border-left-color: #028e00;
-    border-right-color: #028e00;
+    border-bottom-color: #ff0000;
+    border-left-color: #0044ff;
+    border-right-color: #0044ff;
 
 }
 
@@ -65,7 +65,7 @@ body::after {
 .titulo p {
     margin-top: 5px;
 
-    color: #028e00;
+    color: #ff0000;
     font-weight: bold;
     font-size: 20px;
 
@@ -83,7 +83,7 @@ body::after {
 }
 
 .introduccion h1{
-    color: #af1111;
+    color: rgb(0, 0, 0);
 }
 
 .introduccion h2{

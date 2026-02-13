@@ -21,10 +21,10 @@ body::after {
     height: 100%;
 
     background: linear-gradient(to right,
-        #ffffff 33.3%,
-        #028e00 33.3%,
-        #028e00 66.6%,
-        #b90000 33.3%
+        red 33.3%,
+        white 33.3%,
+        white 66.6%,
+        #162eb9 66.6%
     );
     z-index: -1;
 
@@ -39,7 +39,7 @@ body::after {
     font-weight: bold;
     font-size: 20px;
 
-    color: #dc0000;
+    color: #ff001e;
     
     border-radius: 25px;
     
@@ -49,11 +49,10 @@ body::after {
     border-width: 8px;
     border-radius: 25px;
 
-    border-top-color: #ffffff;
-    border-bottom-color: #b90000;
-    border-left-color: #028e00;
-    border-right-color: #028e00;
-
+    border-top-color: #ff001e;
+    border-bottom-color: #162eb9;
+    border-right-color: white;
+    border-left-color: white;
 }
 
 .titulo h1{
@@ -65,7 +64,7 @@ body::after {
 .titulo p {
     margin-top: 5px;
 
-    color: #028e00;
+    color: #162eb9;
     font-weight: bold;
     font-size: 20px;
 
@@ -83,11 +82,11 @@ body::after {
 }
 
 .introduccion h1{
-    color: #af1111;
+    color: red;
 }
 
 .introduccion h2{
-    color: rgb(0, 255, 0);
+    color: green;
 }
 
 .contenedor-texto{
